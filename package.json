@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "config": "^3.3.8",
+    "express": "^4.18.2"
+  },
+  "name": "cartrawler_assessment",
+  "version": "1.0.0",
+  "main": "test.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
