@@ -1,14 +1,13 @@
 const express = require('express');
 const config = require('config');
-const apiHandler = require("./apiHandler");
+const apiMap = require("./handlers/apiMapper");
 
 // Defining the Port from the default config file
 const port = config.get('server.port');
-const app = express()
 
+const app = express()
 // Middleware for parsing json
 app.use(express.json())
-
 
 app.get('/cars', (req, res) => {
   /*
@@ -20,8 +19,8 @@ app.get('/cars', (req, res) => {
   */
   try {
 	const method = req.body.method
-	if (method in apiHandler.apiObject[req.method]){
-		res.send(apiHandler.apiObject[req.method][method]())
+	if (method in apiMap.apiObject[req.method]){
+		res.send(apiMap.apiObject[req.method][method]())
   	}
   	else if (method){
     		res.send('Method specified in request body not recognised')

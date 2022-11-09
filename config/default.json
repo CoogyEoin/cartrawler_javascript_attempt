@@ -2,5 +2,6 @@
     "server": {
       "host": "localhost",
       "port": 8080
-    }
+    },
+    "endpoint": "https://www.cartrawler.com/ctabe/cars.json"
 }
